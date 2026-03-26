@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#f3bf26",
+              "secondary-fixed": "#d8e3fb",
+              "secondary-container": "#3e495d",
+              "primary-fixed-dim": "#00daf3",
+              "tertiary": "#ffeac0",
+              "on-primary-container": "#00626e",
+              "background": "#0b1326",
+              "on-secondary": "#263143",
+              "on-secondary-container": "#aeb9d0",
+              "on-primary-fixed-variant": "#004f58",
+              "secondary": "#bcc7de",
+              "on-tertiary": "#3e2e00",
+              "on-secondary-fixed": "#111c2d",
+              "surface-variant": "#2d3449",
+              "surface-tint": "#00daf3",
+              "surface-container-lowest": "#060e20",
+              "on-tertiary-fixed": "#251a00",
+              "tertiary-container": "#fec931",
+              "outline": "#849396",
+              "surface-container": "#171f33",
+              "surface-bright": "#31394d",
+              "on-background": "#dae2fd",
+              "tertiary-fixed": "#ffdf96",
+              "on-surface-variant": "#bac9cc",
+              "on-tertiary-fixed-variant": "#594400",
+              "surface-container-high": "#222a3d",
+              "inverse-on-surface": "#283044",
+              "primary-fixed": "#9cf0ff",
+              "on-error": "#690005",
+              "primary-container": "#00e5ff",
+              "on-secondary-fixed-variant": "#3c475a",
+              "inverse-surface": "#dae2fd",
+              "secondary-fixed-dim": "#bcc7de",
+              "surface-dim": "#0b1326",
+              "on-primary": "#00363d",
+              "inverse-primary": "#006875",
+              "primary": "#c3f5ff",
+              "on-primary-fixed": "#001f24",
+              "error-container": "#93000a",
+              "surface": "#0b1326",
+              "surface-container-low": "#131b2e",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#3b494c",
+              "on-tertiary-container": "#6f5500",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#2d3449",
+              "on-surface": "#dae2fd"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(34, 42, 61, 0.4);
+        backdrop-filter: blur(12px);
+      }
+      .tech-grid {
+        background-image: radial-gradient(circle at 2px 2px, rgba(59, 73, 76, 0.15) 1px, transparent 0);
+        background-size: 40px 40px;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl border-b border-[#3b494c]/20 shadow-[0_40px_40px_rgba(0,218,243,0.08)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-black tracking-tighter text-[#c3f5ff] font-headline">
+                DIVYANSH.DEV
+            </div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] transition-colors hover:translate-y-[-2px] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]" href="index.html">Home</a>
+<a class="text-[#00e5ff] border-b-2 border-[#00e5ff] pb-1 hover:translate-y-[-2px] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]" href="projects.html">Projects</a>
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] transition-colors hover:translate-y-[-2px] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]" href="education.html">Education</a>
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] transition-colors hover:translate-y-[-2px] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:translate-y-[-2px] transition-all duration-300 active:scale-95 shadow-[0_0_20px_rgba(0,229,255,0.3)]">
+                Resume
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 tech-grid min-h-screen">
+<div class="max-w-7xl mx-auto px-8">
+<!-- Header Section -->
+<header class="mb-20 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/20 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00e5ff]"></span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-secondary">Portfolio 2024</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold tracking-tighter text-on-surface mb-6 leading-[1.1]">
+                    Engineered <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Solutions</span>.
+                </h1>
+<p class="text-secondary text-lg leading-relaxed max-w-2xl">
+                    A selection of high-performance applications bridging the gap between complex data analysis and intuitive user experiences.
+                </p>
+</header>
+<!-- Projects Grid (Asymmetric Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Project 1: AI Data Analysis (Large Featured) -->
+<div class="lg:col-span-7 group">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high aspect-video mb-8 border border-outline-variant/10 group-hover:border-primary-container/30 transition-colors duration-500">
+<img alt="AI Dashboard UI" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-90 transition-all duration-700 group-hover:scale-105" data-alt="Futuristic data visualization dashboard with glowing neon blue charts, dark interface, and neural network node connections in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJy_a8Imlxa7pAnURvGNSFjwRapcgUMB-5lw9pnRglCmpNN2rtSTnBaoVpNW-1IzUJbaJb8WTxpCgB0lvDYFzsAGpnAWxjKjhgYnVDSMNgce2bfFX-hkR8NeNPuznxawRs460atTnKct4QwJW-7xlAMhgGPkcQHHJd_nDdXzwI9XMU5NPwhNS1gSeEc0Qs3F4i7fWqYiXdpD-DsY0EH7HkctEp8_qOhSnxnYdlfTinJj78GS62NvUzM4wlpMP75_Qx7DzYW7FafQ5c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-lowest text-primary text-[10px] font-bold uppercase tracking-widest rounded border-l-2 border-primary">Python</span>
+<span class="px-3 py-1 bg-surface-container-lowest text-primary text-[10px] font-bold uppercase tracking-widest rounded border-l-2 border-primary">ML</span>
+</div>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-3xl font-headline font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">AI-Based Data Analysis Application</h3>
+<p class="text-secondary leading-relaxed mb-8 text-lg">
+                            An advanced analytics engine designed to process massive datasets using proprietary machine learning models. Built for real-time trend prediction and automated anomaly detection.
+                        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface/80">Automated ETL pipelines processing 1M+ records per minute.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface/80">Predictive modeling with 94.2% accuracy on historical data drifts.</span>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2: Full Stack Web App (Elevated Offset) -->
+<div class="lg:col-span-5 lg:pt-24 group">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high aspect-square mb-8 border border-outline-variant/10 group-hover:border-primary-container/30 transition-colors duration-500">
+<img alt="Code on screen" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-90 transition-all duration-700 group-hover:scale-105" data-alt="Close up of a dark mode code editor with vibrant syntax highlighting in cyan and purple, modern workspace atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjJmJfuZLgBaIDZ6-jC0PGKREDTJJJl2rUoJHHNiZJvfpI5YIpQucg4ifArw_JQZgFHcoHKpVX7MNkbyt9jU3kXrY3CmWvE6vVaSqXMvHdKchf3koED6lvz8ETfA-bJuit94zuIPWwN0aweeUcJOB3jamr0m9xmAhYZHgDxWVThQX4K12iKA76wCsJ8FOjIqLKhqldjjCWwWkSNxLwJl9LKcVWFz3Fl59M-CVXguKCOXsopZyYi0wJTY6vRbX6KjLiZTguYTQzRWBx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-lowest text-primary text-[10px] font-bold uppercase tracking-widest rounded border-l-2 border-primary">React</span>
+<span class="px-3 py-1 bg-surface-container-lowest text-primary text-[10px] font-bold uppercase tracking-widest rounded border-l-2 border-primary">Node.js</span>
+</div>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-3xl font-headline font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">Full Stack Web Application</h3>
+<p class="text-secondary leading-relaxed mb-8">
+                            A highly scalable SaaS platform featuring real-time collaboration tools and a custom microservices architecture for enterprise clients.
+                        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface/80">Integrated WebSockets for sub-100ms sync across clients.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface/80">Custom component library built on top of Tailwind CSS.</span>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View Live Demo <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Skills Secondary Section -->
+<section class="mt-40 pt-20 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">terminal</span>
+<h4 class="text-xl font-headline font-bold mb-3">Core Engineering</h4>
+<p class="text-secondary text-sm">Expertise in Python, Java, and TypeScript for robust backend systems.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">cloud_queue</span>
+<h4 class="text-xl font-headline font-bold mb-3">Cloud Infrastructure</h4>
+<p class="text-secondary text-sm">Deployment and scaling using Docker, Kubernetes, and AWS ecosystems.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">bolt</span>
+<h4 class="text-xl font-headline font-bold mb-3">Optimized UX</h4>
+<p class="text-secondary text-sm">High-performance frontend architecture with React and Next.js.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Contact Section -->
+<section id="contact" class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4">Get In <span class="text-primary-container">Touch</span></h2>
+<p class="text-secondary max-w-lg mx-auto">Ready to collaborate on innovative projects? Let's connect and build something amazing together.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Contact Form -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Send a Message</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Name</label>
+<input type="text" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors" placeholder="Your Name">
+</div>
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Email</label>
+<input type="email" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors" placeholder="your.email@example.com">
+</div>
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Message</label>
+<textarea rows="5" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+</div>
+<button type="submit" class="btn-primary-gradient text-on-primary-container px-8 py-4 font-headline font-bold tracking-tight hover:translate-y-[-4px] transition-all duration-300 w-full">
+Send Message
+</button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="space-y-8">
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">email</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Email</div>
+<div class="text-secondary">divyansh@example.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">phone</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Phone</div>
+<div class="text-secondary">+91 98765 43210</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">location_on</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Location</div>
+<div class="text-secondary">Kanpur, India</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Connect Online</h3>
+<div class="flex gap-4">
+<a href="https://linkedin.com/in/divyansh-mishra" target="_blank" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">link</span>
+</a>
+<a href="https://github.com/divyansh-mishra" target="_blank" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">code</span>
+</a>
+<a href="mailto:divyansh@example.com" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">email</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#060e20] w-full py-12 border-t border-[#3b494c]/10">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+<div class="text-lg font-bold text-[#c3f5ff] font-headline">DIVYANSH.DEV</div>
+<div class="text-[#bcc7de] font-['Inter'] text-sm tracking-wide">
+                © 2024 Divyansh Mishra. Engineered for Precision.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://linkedin.com/in/divyansh-mishra" target="_blank">LinkedIn</a>
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://github.com/divyansh-mishra" target="_blank">GitHub</a>
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="mailto:divyansh@example.com">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

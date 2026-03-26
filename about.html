@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DIVYANSH.DEV | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#f3bf26",
+              "secondary-fixed": "#d8e3fb",
+              "secondary-container": "#3e495d",
+              "primary-fixed-dim": "#00daf3",
+              "tertiary": "#ffeac0",
+              "on-primary-container": "#00626e",
+              "background": "#0b1326",
+              "on-secondary": "#263143",
+              "on-secondary-container": "#aeb9d0",
+              "on-primary-fixed-variant": "#004f58",
+              "secondary": "#bcc7de",
+              "on-tertiary": "#3e2e00",
+              "on-secondary-fixed": "#111c2d",
+              "surface-variant": "#2d3449",
+              "surface-tint": "#00daf3",
+              "surface-container-lowest": "#060e20",
+              "on-tertiary-fixed": "#251a00",
+              "tertiary-container": "#fec931",
+              "outline": "#849396",
+              "surface-container": "#171f33",
+              "surface-bright": "#31394d",
+              "on-background": "#dae2fd",
+              "tertiary-fixed": "#ffdf96",
+              "on-surface-variant": "#bac9cc",
+              "on-tertiary-fixed-variant": "#594400",
+              "surface-container-high": "#222a3d",
+              "inverse-on-surface": "#283044",
+              "primary-fixed": "#9cf0ff",
+              "on-error": "#690005",
+              "primary-container": "#00e5ff",
+              "on-secondary-fixed-variant": "#3c475a",
+              "inverse-surface": "#dae2fd",
+              "secondary-fixed-dim": "#bcc7de",
+              "surface-dim": "#0b1326",
+              "on-primary": "#00363d",
+              "inverse-primary": "#006875",
+              "primary": "#c3f5ff",
+              "on-primary-fixed": "#001f24",
+              "error-container": "#93000a",
+              "surface": "#0b1326",
+              "surface-container-low": "#131b2e",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#3b494c",
+              "on-tertiary-container": "#6f5500",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#2d3449",
+              "on-surface": "#dae2fd"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.05), transparent 40%);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #c3f5ff 0%, #00e5ff 100%);
+        }
+        .skill-badge-accent {
+            width: 2px;
+            height: 100%;
+            background-color: #c3f5ff;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl border-b border-[#3b494c]/20 shadow-[0_40px_40px_rgba(0,218,243,0.08)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-black tracking-tighter text-[#c3f5ff] font-headline">
+                DIVYANSH.DEV
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] font-['Space_Grotesk'] font-bold tracking-tight hover:translate-y-[-2px] transition-all duration-300" href="index.html">Home</a>
+<a class="text-[#00e5ff] border-b-2 border-[#00e5ff] pb-1 font-['Space_Grotesk'] font-bold tracking-tight hover:translate-y-[-2px] transition-all duration-300" href="projects.html">Projects</a>
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] font-['Space_Grotesk'] font-bold tracking-tight hover:translate-y-[-2px] transition-all duration-300" href="education.html">Education</a>
+<a class="text-[#bcc7de] hover:text-[#c3f5ff] font-['Space_Grotesk'] font-bold tracking-tight hover:translate-y-[-2px] transition-all duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-sm tracking-tight hover:translate-y-[-2px] active:scale-95 transition-all">
+                Resume
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center hero-gradient px-8">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-block px-3 py-1 border border-primary-container/30 bg-primary-container/5 rounded-full">
+<span class="text-primary-container font-label text-[10px] tracking-[0.2em] uppercase font-bold">Available for Collaboration</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-background leading-[0.9]">
+                        DIVYANSH <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">MISHRA</span>
+</h1>
+<p class="text-secondary text-xl md:text-2xl max-w-xl font-light leading-relaxed">
+                        B.Tech Computer Science Student | AI/ML &amp; Full Stack Developer. Architecting intelligent systems and seamless digital experiences.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="btn-primary-gradient text-on-primary-container px-8 py-4 font-headline font-bold tracking-tight flex items-center gap-2 group hover:translate-y-[-4px] transition-all duration-300">
+                            View Projects
+                            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-outline-variant/30 hover:bg-surface-container-high text-primary px-8 py-4 font-headline font-bold tracking-tight hover:translate-y-[-4px] transition-all duration-300">
+                            Get in touch
+                        </button>
+</div>
+</div>
+<div class="relative hidden md:block">
+<div class="absolute -inset-4 bg-primary-container/10 blur-3xl rounded-full"></div>
+<div class="relative aspect-square bg-surface-container-low overflow-hidden rounded-xl border border-outline-variant/10 shadow-2xl">
+<img alt="Abstract code on a dark screen" class="w-full h-full object-cover opacity-60" data-alt="Close-up of vibrant neon cyan and purple source code lines on a deep black terminal screen with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGfY7keBlkBDmZwWvPySVjEAYUxB5LzXBhOykKEYAnpyhZ_fw2lRslrRnX3TDYInbKmCipO27p61w3yvCKjVWl_A5s9CsO4GvPLw8hAixNUXIYarNlhjBD5piH60sXTCpTAwHKSEXPFhcRmff63S8lKymM-Kw1PRCCa97MCDKmKxEUyrNsljNXRcanus0VRkQP-hYb7R8_ZIPLWKf7it2E62wOiZjaV-GkxZnmkgYWGOuABxWqDhyT2_WbThIjspNjVjhEFt3Lqnbx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+</div>
+<div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary/60">Currently Building</div>
+<div class="font-headline font-bold text-primary">Neural Mesh Engine</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Objective Section -->
+<section class="py-24 bg-surface-container-lowest px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-4">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-primary-container flex items-center gap-4">
+<span class="w-12 h-[1px] bg-primary-container/30"></span>
+                        Objective
+                    </h2>
+</div>
+<div class="md:col-span-8">
+<p class="text-on-background text-2xl md:text-3xl font-light leading-[1.4] text-justify md:text-left">
+                        Seeking to leverage comprehensive academic background in <span class="text-primary font-medium">Computer Science</span> and hands-on expertise in <span class="text-primary font-medium">AI/ML and Full Stack development</span> to contribute to innovative projects. Committed to engineering scalable solutions that bridge the gap between complex algorithms and intuitive user interfaces.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4">Technical <span class="text-primary-container">Ecosystem</span></h2>
+<p class="text-secondary max-w-lg">A curated set of tools and technologies I use to bring complex digital visions to life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Skill Category: Intelligence -->
+<div class="bg-surface-container-high p-8 space-y-6 relative group hover:bg-surface-container-highest transition-colors duration-500">
+<div class="text-primary-container">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Artificial Intelligence</h3>
+<div class="flex flex-wrap gap-3">
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Python</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">TensorFlow</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">PyTorch</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">OpenCV</span>
+</div>
+</div>
+</div>
+<!-- Skill Category: Engineering -->
+<div class="bg-surface-container-high p-8 space-y-6 relative group hover:bg-surface-container-highest transition-colors duration-500">
+<div class="text-primary-container">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">developer_mode_tv</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Full Stack</h3>
+<div class="flex flex-wrap gap-3">
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">React.js</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Node.js</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">PostgreSQL</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Next.js</span>
+</div>
+</div>
+</div>
+<!-- Skill Category: Architecture -->
+<div class="bg-surface-container-high p-8 space-y-6 relative group hover:bg-surface-container-highest transition-colors duration-500">
+<div class="text-primary-container">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Architecture</h3>
+<div class="flex flex-wrap gap-3">
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Docker</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">AWS</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Kubernetes</span>
+</div>
+<div class="relative pl-3 py-1 pr-3 bg-surface-container-lowest overflow-hidden">
+<div class="skill-badge-accent"></div>
+<span class="font-label text-xs uppercase tracking-widest">Git</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Bento -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4">Selected <span class="text-primary-container">Works</span></h2>
+<p class="text-secondary max-w-sm">From algorithmic research to production-ready platforms.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-headline font-bold hover:gap-4 transition-all">
+                        All Projects <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+<!-- Large Project -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high group overflow-hidden relative border border-outline-variant/10">
+<img alt="Blockchain visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40" data-alt="Digital representation of complex network nodes with glowing cyan connecting lines in 3D dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUlAXtVBMybBXsXh9FtMJocEYIImx_Ripw0yC6uvJ9veq-nHDRn27-CZ-m4gNtnGA30bG3iiI8CiaTpjz3Y3twPOpJjPx0hDE_86uOprGw0TDRv1qDl14E1gR3bN05ZaumjPW98UcHDE8pGi5Qx-ecufHnSsYruDyDaSE4J0T75zYtPUaGgexYxMGjey-tolIGlNwQo2AtyCzRqD4vdjABmyaUCMndeIh8RK4GshIWqbK82leUpPlBtB07EMw2oT8HyDBU5oNW9brl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="font-label text-xs text-primary-container tracking-widest mb-4">FULL STACK • AI</div>
+<h3 class="font-headline text-4xl font-bold mb-4">NeuralTrade Pro</h3>
+<p class="text-secondary max-w-md mb-8">AI-driven cryptocurrency predictive platform with real-time analytics dashboard and automated execution engine.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface hover:text-primary-container cursor-pointer">open_in_new</span>
+<span class="material-symbols-outlined text-on-surface hover:text-primary-container cursor-pointer">code</span>
+</div>
+</div>
+</div>
+<!-- Small Project 1 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between group border border-outline-variant/10">
+<div class="space-y-4">
+<div class="font-label text-xs text-primary-container tracking-widest">COMPUTER VISION</div>
+<h3 class="font-headline text-2xl font-bold">Sentinel Guard</h3>
+<p class="text-secondary text-sm">Real-time object detection system for automated security monitoring using YOLOv8.</p>
+</div>
+<div class="flex justify-between items-center mt-8">
+<span class="text-xs font-mono text-outline">v1.2.4</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Small Project 2 -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between group border border-outline-variant/10">
+<div class="space-y-4">
+<div class="font-label text-xs text-primary-container tracking-widest">OPEN SOURCE</div>
+<h3 class="font-headline text-2xl font-bold">DevDock UI</h3>
+<p class="text-secondary text-sm">A lightweight component library designed for high-performance developer documentation.</p>
+</div>
+<div class="flex justify-between items-center mt-8">
+<span class="text-xs font-mono text-outline">GitHub Stars: 2.1k</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8">
+<div class="max-w-5xl mx-auto bg-primary-container p-12 md:p-24 relative overflow-hidden text-center">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, black 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline text-4xl md:text-6xl font-black text-on-primary-container tracking-tighter">LET'S ENGINEER THE FUTURE.</h2>
+<p class="text-on-primary-container/80 text-xl font-medium max-w-2xl mx-auto">Currently open to internship opportunities and collaborative research in Artificial Intelligence.</p>
+<a href="#contact" class="bg-on-primary-container text-primary-container px-10 py-5 font-headline font-bold text-lg hover:translate-y-[-4px] active:scale-95 transition-all shadow-xl">
+                        Start a Conversation
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Contact Section -->
+<section id="contact" class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-4">Get In <span class="text-primary-container">Touch</span></h2>
+<p class="text-secondary max-w-lg mx-auto">Ready to collaborate on innovative projects? Let's connect and build something amazing together.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Contact Form -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Send a Message</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Name</label>
+<input type="text" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors" placeholder="Your Name">
+</div>
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Email</label>
+<input type="email" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors" placeholder="your.email@example.com">
+</div>
+<div>
+<label class="block text-sm font-label font-bold text-secondary mb-2 uppercase tracking-widest">Message</label>
+<textarea rows="5" class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/20 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+</div>
+<button type="submit" class="btn-primary-gradient text-on-primary-container px-8 py-4 font-headline font-bold tracking-tight hover:translate-y-[-4px] transition-all duration-300 w-full">
+Send Message
+</button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="space-y-8">
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">email</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Email</div>
+<div class="text-secondary">divyansh@example.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">phone</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Phone</div>
+<div class="text-secondary">+91 98765 43210</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary-container">location_on</span>
+</div>
+<div>
+<div class="font-headline font-bold text-on-surface">Location</div>
+<div class="text-secondary">Kanpur, India</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-6 text-primary-container">Connect Online</h3>
+<div class="flex gap-4">
+<a href="https://linkedin.com/in/divyansh-mishra" target="_blank" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">link</span>
+</a>
+<a href="https://github.com/divyansh-mishra" target="_blank" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">code</span>
+</a>
+<a href="mailto:divyansh@example.com" class="w-12 h-12 bg-primary-container/20 hover:bg-primary-container/30 flex items-center justify-center rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary-container">email</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#060e20] border-t border-[#3b494c]/10 w-full py-12">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+<div class="text-lg font-bold text-[#c3f5ff] font-headline">
+                DIVYANSH.DEV
+            </div>
+<div class="text-[#bcc7de] font-['Inter'] text-sm tracking-wide">
+                © 2024 Divyansh Mishra. Engineered for Precision.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://linkedin.com/in/divyansh-mishra" target="_blank">LinkedIn</a>
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://github.com/divyansh-mishra" target="_blank">GitHub</a>
+<a class="text-[#bcc7de] hover:text-[#00e5ff] transition-colors font-['Inter'] text-sm tracking-wide" href="mailto:divyansh@example.com">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

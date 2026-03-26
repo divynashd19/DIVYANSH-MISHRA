@@ -1,0 +1,32 @@
+{
+  "name": "divyansh-mishra-portfolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website for Divyansh Mishra - AI/ML & Full Stack Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'Static site - no build required'",
+    "preview": "npx serve . --listen 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "ai-ml",
+    "full-stack",
+    "tailwindcss",
+    "responsive-design"
+  ],
+  "author": "Divyansh Mishra",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divyansh-mishra/portfolio.git"
+  },
+  "homepage": "https://divyansh.dev"
+}</content>
+<parameter name="filePath">c:\Users\nidhi\Downloads\stitch_divyansh_mishra_resume_data (3)\package.json
