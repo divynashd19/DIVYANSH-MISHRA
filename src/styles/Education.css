@@ -1,0 +1,106 @@
+/* ========================
+   EDUCATION SECTION
+   ======================== */
+.education {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--neutral-100) 0%, var(--neutral-50) 100%);
+}
+
+.education h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.education-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.edu-card {
+  background: var(--neutral-0);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  transition: var(--transition);
+  display: flex;
+  gap: 2rem;
+}
+
+.edu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.edu-rect {
+  flex-shrink: 0;
+}
+
+.edu-details h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.edu-details .degree {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.edu-details .specialization {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.edu-details .college {
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.edu-details .duration {
+  color: var(--text-quaternary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* ========================
+   RESPONSIVE EDUCATION
+   ======================== */
+@media (max-width: 768px) {
+  .education {
+    padding: 60px 0;
+  }
+
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .edu-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 40px 0;
+  }
+
+  .edu-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .edu-details h3 {
+    font-size: 1.1rem;
+  }
+}
