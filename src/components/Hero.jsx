@@ -7,7 +7,10 @@ import profileImg from '../assets/profile.jpg';
 
 export default function Hero() {
   const handleDownloadCV = () => {
-    alert('Preparing your CV download...');
+    const link = document.createElement('a');
+    link.href = '/Divyansh_Mishra_Resume.pdf';
+    link.download = 'Divyansh_Mishra_Resume.pdf';
+    link.click();
   };
 
   const handleGetInTouch = () => {

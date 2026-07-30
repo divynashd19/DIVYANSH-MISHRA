@@ -27,7 +27,7 @@ export default function Skills() {
     {
       category: 'Tools & Workflow',
       icon: <Wrench className="text-emerald-400" size={24} />,
-      skills: ['Git & GitHub', 'Vite', 'Postman', 'npm / yarn'],
+      skills: ['Git & GitHub', 'Postman', 'npm', 'n8n'],
       color: 'from-emerald-400/15 to-transparent'
     },
     {

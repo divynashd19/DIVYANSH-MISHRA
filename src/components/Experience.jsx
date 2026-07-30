@@ -9,7 +9,7 @@ export default function Experience() {
       role: 'Software Engineer',
       company: 'Townmanor Technologies P-Ltd',
       duration: 'Apr 2026 - Present',
-      location: 'Kanpur Nagar, UP, India (Remote/Hybrid)',
+      location: 'Kanpur Nagar, UP, India (Onsite)',
       type: 'Engineering & Software Industry',
       color: 'from-accent-blue/15 to-transparent',
       borderColor: 'group-hover:border-accent-blue/40',
