@@ -1,18 +1,19 @@
 // Netlify serverless function: forwards the portfolio contact form to your WhatsApp via Twilio.
 // Required environment variables (set in Netlify dashboard, never in the repo):
-//   TWILIO_ACCOUNT_SID   - starts with "AC..."
-//   TWILIO_AUTH_TOKEN    - secret auth token from the Twilio console
-//   TWILIO_WHATSAPP_FROM - Twilio's WhatsApp sender, e.g. "whatsapp:+14155238886" (sandbox) or your approved number
-//   TWILIO_WHATSAPP_TO   - your own WhatsApp number to receive messages, e.g. "whatsapp:+9170XXXXXXXX"
+//   TWILIO_ACCOUNT_SID     - starts with "AC..." (used in the API URL)
+//   TWILIO_API_KEY_SID     - starts with "SK..." (preferred auth, revocable independently)
+//   TWILIO_API_KEY_SECRET  - secret paired with the API key
+//   TWILIO_WHATSAPP_FROM   - Twilio's WhatsApp sender, e.g. "whatsapp:+14155238886" (sandbox) or your approved number
+//   TWILIO_WHATSAPP_TO     - your own WhatsApp number to receive messages, e.g. "whatsapp:+9170XXXXXXXX"
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
-  const { TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_WHATSAPP_FROM, TWILIO_WHATSAPP_TO } = process.env;
+  const { TWILIO_ACCOUNT_SID, TWILIO_API_KEY_SID, TWILIO_API_KEY_SECRET, TWILIO_WHATSAPP_FROM, TWILIO_WHATSAPP_TO } = process.env;
 
-  if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !TWILIO_WHATSAPP_FROM || !TWILIO_WHATSAPP_TO) {
+  if (!TWILIO_ACCOUNT_SID || !TWILIO_API_KEY_SID || !TWILIO_API_KEY_SECRET || !TWILIO_WHATSAPP_FROM || !TWILIO_WHATSAPP_TO) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Server is not configured for WhatsApp delivery' }) };
   }
 
@@ -51,7 +52,7 @@ export const handler = async (event) => {
       {
         method: 'POST',
         headers: {
-          Authorization: 'Basic ' + Buffer.from(`${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}`).toString('base64'),
+          Authorization: 'Basic ' + Buffer.from(`${TWILIO_API_KEY_SID}:${TWILIO_API_KEY_SECRET}`).toString('base64'),
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: params.toString()
