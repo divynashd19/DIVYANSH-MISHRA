@@ -21,6 +21,15 @@
   <body class="bg-[#030712] text-slate-100 overflow-x-hidden antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- Static form so Netlify's build bot can detect it for Netlify Forms. Never shown to users. -->
+    <form name="contact" data-netlify="true" netlify-honeypot="company" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input type="text" name="company" />
+    </form>
+
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
