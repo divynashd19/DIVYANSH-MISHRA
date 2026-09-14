@@ -5,11 +5,12 @@ import Button from './ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', company: '' });
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const contactInfo = [
     {
@@ -73,12 +74,12 @@ export default function Contact() {
     setErrors(prev => ({ ...prev, [name]: error }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validate all fields
+
+    // Validate all fields (skip the honeypot)
     const newErrors = {};
-    Object.keys(formData).forEach(key => {
+    ['name', 'email', 'message'].forEach(key => {
       const error = validateField(key, formData[key]);
       if (error) newErrors[key] = error;
     });
@@ -88,15 +89,28 @@ export default function Contact() {
 
     if (Object.keys(newErrors).length === 0) {
       setIsSubmitting(true);
-      // Simulate API submit
-      setTimeout(() => {
-        setIsSubmitting(false);
+      setSubmitError('');
+      try {
+        const response = await fetch('/.netlify/functions/send-whatsapp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send message');
+        }
+
         setSubmitSuccess(true);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', company: '' });
         setTouched({});
         // Reset success state after 5 seconds
         setTimeout(() => setSubmitSuccess(false), 5000);
-      }, 1500);
+      } catch (err) {
+        setSubmitError("Couldn't send your message right now. Please try again or email me directly.");
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -174,6 +188,18 @@ export default function Contact() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
+                    {/* Honeypot field - hidden from real users, bots tend to fill it */}
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                      className="absolute w-0 h-0 opacity-0 -z-10"
+                      aria-hidden="true"
+                    />
+
                     {/* Name Field */}
                     <div className="flex flex-col gap-2">
                       <label className="text-sm font-bold text-slate-400 uppercase tracking-wider">Name</label>
@@ -243,9 +269,13 @@ export default function Contact() {
                       )}
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      variant="primary" 
+                    {submitError && (
+                      <span className="text-sm font-medium text-red-400 -mt-2">{submitError}</span>
+                    )}
+
+                    <Button
+                      type="submit"
+                      variant="primary"
                       className="w-full py-4 mt-2 justify-center"
                       disabled={isSubmitting}
                     >
